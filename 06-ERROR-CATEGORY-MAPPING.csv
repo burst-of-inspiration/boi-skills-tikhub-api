@@ -1,0 +1,16 @@
+category,match_rule,retryable_default,severity_default,user_message_policy
+AUTH_ERROR,http_status=401,false,high,show re-auth instruction without exposing token details
+PERMISSION_ERROR,http_status=403,false,high,show permission scope guidance
+VALIDATION_ERROR,http_status=422,false,medium,show field-level validation details
+BAD_REQUEST,http_status=400,false,medium,show input correction guidance
+NOT_FOUND,http_status=404,false,low,show resource missing hint
+RATE_LIMITED,http_status=429,true,medium,show retry-after or backoff hint
+BILLING_ERROR,http_status=402 or message contains insufficient balance,false,high,show billing/recharge guidance without account details
+UPSTREAM_5XX,http_status in 500-599,true,high,show upstream instability message
+TIMEOUT,runtime_timeout=true,true,high,show timeout and retry suggestion
+NETWORK_ERROR,transport_error=true,true,high,show network issue and retry suggestion
+CIRCUIT_OPEN,runtime_circuit_open=true,true,high,show temporary protection state and retry window
+REDIRECT_ERROR,redirect_resolution_failed=true,false,medium,show redirect handling failure message
+UPSTREAM_APP_ERROR,"http_2xx and upstream_code not in [0,200]",false,medium,show upstream business error message
+CONTRACT_VIOLATION,response_parse_or_schema_failure=true,false,high,show adapter contract mismatch message
+UNKNOWN_ERROR,fallback_unmatched_case,false,medium,show generic failure with request id

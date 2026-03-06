@@ -1,0 +1,16 @@
+skill_package,slo_tier,operation_count
+skill-tikhub-core,SLO1,5
+skill-tikhub-core,SLO2,5
+skill-tikhub-core,SLO3,4
+skill-tikhub-douyin-family,SLO1,68
+skill-tikhub-douyin-family,SLO2,139
+skill-tikhub-douyin-family,SLO3,186
+skill-tikhub-experimental,SLO1,3
+skill-tikhub-experimental,SLO2,18
+skill-tikhub-experimental,SLO3,5
+skill-tikhub-global-social,SLO1,49
+skill-tikhub-global-social,SLO2,152
+skill-tikhub-global-social,SLO3,195
+skill-tikhub-video-community,SLO1,7
+skill-tikhub-video-community,SLO2,68
+skill-tikhub-video-community,SLO3,83

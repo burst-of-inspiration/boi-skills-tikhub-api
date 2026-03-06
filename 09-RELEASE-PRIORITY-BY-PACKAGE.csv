@@ -1,0 +1,6 @@
+release_order,skill_package,release_risk_score,total_operations,recommended_strategy
+1,skill-tikhub-douyin-family,431,393,canary_first_then_gradual
+2,skill-tikhub-global-social,413,396,canary_first_then_gradual
+3,skill-tikhub-video-community,93,158,standard_staged_release
+4,skill-tikhub-experimental,53,26,standard_staged_release
+5,skill-tikhub-core,34,14,fast_follow_release

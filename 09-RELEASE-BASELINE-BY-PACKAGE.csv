@@ -1,0 +1,6 @@
+skill_package,total_operations,test_critical,test_high,test_standard,security_critical,security_high,security_medium,release_risk_score
+skill-tikhub-douyin-family,393,68,139,186,22,0,371,431
+skill-tikhub-global-social,396,49,152,195,22,13,361,413
+skill-tikhub-video-community,158,7,68,83,1,0,157,93
+skill-tikhub-experimental,26,3,18,5,1,11,14,53
+skill-tikhub-core,14,5,5,4,0,7,7,34

@@ -1,0 +1,16 @@
+error_category,severity_default,retryable_default,alert_severity,default_trigger
+AUTH_ERROR,high,false,P1,5m count > 20
+PERMISSION_ERROR,high,false,P1,5m count > 20
+VALIDATION_ERROR,medium,false,P2,5m rate > 3%
+BAD_REQUEST,medium,false,P2,5m rate > 3%
+NOT_FOUND,low,false,P3,5m rate > 3%
+RATE_LIMITED,medium,true,P2,5m rate > 5%
+BILLING_ERROR,high,false,P1,5m rate > 3%
+UPSTREAM_5XX,high,true,P1,5m rate > 2%
+TIMEOUT,high,true,P1,5m rate > 1%
+NETWORK_ERROR,high,true,P1,5m rate > 1%
+CIRCUIT_OPEN,high,true,P1,5m rate > 3%
+REDIRECT_ERROR,medium,false,P2,5m rate > 3%
+UPSTREAM_APP_ERROR,medium,false,P2,5m rate > 3%
+CONTRACT_VIOLATION,high,false,P1,any occurrence
+UNKNOWN_ERROR,medium,false,P2,5m rate > 3%

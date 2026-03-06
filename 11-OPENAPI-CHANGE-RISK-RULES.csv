@@ -1,0 +1,12 @@
+change_type,detected_by,severity,required_action
+operation_added,operation_id exists in new snapshot but not in baseline,medium,add adapter tests and update package changelog
+operation_removed,operation_id missing in new snapshot but exists in baseline,high,mark breaking change and remove/deprecate action
+path_or_method_changed,method/path tuple changed for existing operation_id,high,update routing adapter and integration tests
+request_profile_changed,request profile NONE/JSON/MULTIPART changed,high,update request serializer and fixtures
+response_profile_changed,response envelope profile changed,high,update response mapper and contract tests
+status_codes_changed,declared response status set changed,medium,update error mapping and retry policy verification
+has_422_changed,validation status declaration added or removed,medium,update validation and negative test plan
+parameter_signature_changed,parameter set/requiredness/type changed,high,update input validation and docs
+request_body_media_changed,request body media type set changed,high,update content-type handling and tests
+response_schema_ref_changed,200-response schema reference changed,high,update parser and normalized mapping
+operation_signature_hash_changed,any contract-significant field changed,high,run full package regression for impacted operations

@@ -1,0 +1,7 @@
+method,path,operation_id,response_profile,response_schema_ref
+get,/api/v1/health/check,health_check_api_v1_health_check_get,CUSTOM_MODEL,#/components/schemas/HealthCheckResponse
+get,/api/v1/ios_shortcut/shortcut,get_shortcut_api_v1_ios_shortcut_shortcut_get,CUSTOM_MODEL,#/components/schemas/iOS_Shortcut
+get,/api/v1/tikhub/downloader/redirect_download,redirect_download_api_v1_tikhub_downloader_redirect_download_get,REDIRECT,(inline_or_none)
+get,/api/v1/tikhub/downloader/version,update_check_api_v1_tikhub_downloader_version_get,CUSTOM_MODEL,#/components/schemas/UpdateCheckResponse
+get,/api/v1/tikhub/user/get_user_info,get_user_info_api_v1_tikhub_user_get_user_info_get,CUSTOM_MODEL,#/components/schemas/UserInfoResponseModel
+post,/api/v1/douyin/creator_v2/fetch_item_list_download,fetch_item_list_download_api_v1_douyin_creator_v2_fetch_item_list_download_post,INLINE_OR_NONE,(inline_or_none)

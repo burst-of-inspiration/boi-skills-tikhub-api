@@ -1,0 +1,13 @@
+skill_package,security_risk_tier,operation_count
+skill-tikhub-core,HIGH,7
+skill-tikhub-core,MEDIUM,7
+skill-tikhub-douyin-family,CRITICAL,22
+skill-tikhub-douyin-family,MEDIUM,371
+skill-tikhub-experimental,CRITICAL,1
+skill-tikhub-experimental,HIGH,11
+skill-tikhub-experimental,MEDIUM,14
+skill-tikhub-global-social,CRITICAL,22
+skill-tikhub-global-social,HIGH,13
+skill-tikhub-global-social,MEDIUM,361
+skill-tikhub-video-community,CRITICAL,1
+skill-tikhub-video-community,MEDIUM,157

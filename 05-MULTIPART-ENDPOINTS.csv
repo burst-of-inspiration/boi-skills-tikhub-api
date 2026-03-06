@@ -1,0 +1,2 @@
+method,path,operation_id,body_content_types
+post,/api/v1/sora2/upload_image,upload_image_api_v1_sora2_upload_image_post,multipart/form-data

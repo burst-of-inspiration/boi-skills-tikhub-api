@@ -1,0 +1,16 @@
+skill_package,test_tier,operation_count
+skill-tikhub-core,critical,5
+skill-tikhub-core,high,5
+skill-tikhub-core,standard,4
+skill-tikhub-douyin-family,critical,68
+skill-tikhub-douyin-family,high,139
+skill-tikhub-douyin-family,standard,186
+skill-tikhub-experimental,critical,3
+skill-tikhub-experimental,high,18
+skill-tikhub-experimental,standard,5
+skill-tikhub-global-social,critical,49
+skill-tikhub-global-social,high,152
+skill-tikhub-global-social,standard,195
+skill-tikhub-video-community,critical,7
+skill-tikhub-video-community,high,68
+skill-tikhub-video-community,standard,83
