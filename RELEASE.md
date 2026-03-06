@@ -20,8 +20,8 @@ git push -u origin main
 
 ## 3. Tag Alpha Release
 ```bash
-git tag v0.1.0-alpha.4
-git push origin v0.1.0-alpha.4
+git tag v0.1.0-alpha.5
+git push origin v0.1.0-alpha.5
 ```
 
 ## 4. Stable Release (after runtime implementation)

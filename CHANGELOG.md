@@ -8,6 +8,12 @@ The format is based on Keep a Changelog and this project follows Semantic Versio
 ### Added
 - Placeholder for upcoming runtime and adapter implementation changes.
 
+## [0.1.0-alpha.5] - 2026-03-06
+### Fixed
+- `curl ... | bash` installer mode now reads prompts from `/dev/tty` when available.
+- Improved piped-install robustness in Bash stdin execution mode.
+- Added clearer error guidance for non-interactive sessions without API key input.
+
 ## [0.1.0-alpha.4] - 2026-03-06
 ### Fixed
 - Installer download flow no longer mixes log output into the resolved source path.

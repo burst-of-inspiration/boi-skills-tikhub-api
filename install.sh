@@ -34,6 +34,10 @@ err() {
   printf '[install][error] %s\n' "$*" >&2
 }
 
+can_use_tty() {
+  [[ -t 0 || -t 1 || -t 2 ]] && [[ -r /dev/tty ]]
+}
+
 prompt() {
   local message="$1"
   local default_value="${2:-}"
@@ -45,12 +49,20 @@ prompt() {
   fi
 
   if [[ -n "$default_value" ]]; then
-    read -r -p "$message [$default_value]: " answer || true
+    if can_use_tty; then
+      read -r -p "$message [$default_value]: " answer < /dev/tty || true
+    else
+      read -r -p "$message [$default_value]: " answer || true
+    fi
     if [[ -z "$answer" ]]; then
       answer="$default_value"
     fi
   else
-    read -r -p "$message: " answer || true
+    if can_use_tty; then
+      read -r -p "$message: " answer < /dev/tty || true
+    else
+      read -r -p "$message: " answer || true
+    fi
   fi
 
   printf '%s\n' "$answer"
@@ -64,7 +76,11 @@ confirm() {
   fi
 
   local ans
-  read -r -p "$message [y/N]: " ans || true
+  if can_use_tty; then
+    read -r -p "$message [y/N]: " ans < /dev/tty || true
+  else
+    read -r -p "$message [y/N]: " ans || true
+  fi
   case "$ans" in
     y|Y|yes|YES) return 0 ;;
     *) return 1 ;;
@@ -129,7 +145,8 @@ detect_skills_dir() {
 
 resolve_source_root() {
   local script_dir
-  script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+  local script_source="${BASH_SOURCE[0]-$0}"
+  script_dir="$(cd "$(dirname "$script_source")" && pwd)"
 
   if [[ -f "$script_dir/skills/tikhub/SKILL.md" ]]; then
     printf '%s\n' "$script_dir"
@@ -248,8 +265,15 @@ if [[ -z "$INPUT_API_KEY" ]]; then
     exit 1
   fi
 
-  read -r -s -p "Enter TIKHUB_API_KEY (input hidden): " INPUT_API_KEY
-  printf '\n'
+  if can_use_tty; then
+    read -r -s -p "Enter TIKHUB_API_KEY (input hidden): " INPUT_API_KEY < /dev/tty
+    printf '\n' > /dev/tty
+  else
+    err "No interactive TTY available for API key prompt"
+    err "Set env TIKHUB_API_KEY or use --api-key/--yes"
+    exit 1
+  fi
+
   if [[ -z "$INPUT_API_KEY" ]]; then
     err "TIKHUB_API_KEY cannot be empty"
     exit 1
