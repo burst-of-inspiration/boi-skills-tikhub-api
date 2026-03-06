@@ -14,11 +14,34 @@ Build a full-coverage TikHub skill set with explicit standards for:
 - testing, security, release, and observability governance
 
 ## Current Release Status
-- Current maturity: `v0.1.0-alpha` (documentation and governance baseline ready)
+- Current maturity: `v0.1.0-alpha.2` (governance baseline + installer ready)
 - Governance documents `01-12`: completed
 - Runtime/adapter implementation: in progress
 
-## Quick Start
+## OpenClaw Quick Install (No Clone)
+
+The installer is OpenClaw/Codex-first:
+- auto-detects skills directory (`$OPENCLAW_HOME/skills`, `$CODEX_HOME/skills`, `~/.codex/skills`, ...).
+- installs skill files to `<skills-dir>/tikhub-api`.
+- prompts for `TIKHUB_API_KEY` and writes it to `<skills-dir>/tikhub-api/.env`.
+
+### Interactive Install
+```bash
+curl -fsSL https://raw.githubusercontent.com/burst-of-inspiration/boi-skills-tikhub-api/main/install.sh | bash
+```
+
+### Non-Interactive Install
+```bash
+curl -fsSL https://raw.githubusercontent.com/burst-of-inspiration/boi-skills-tikhub-api/main/install.sh -o /tmp/boi-tikhub-install.sh
+TIKHUB_API_KEY='your_api_key' bash /tmp/boi-tikhub-install.sh --yes --force
+```
+
+You can also pin installer source to a ref:
+```bash
+bash /tmp/boi-tikhub-install.sh --yes --ref v0.1.0-alpha.1
+```
+
+## Maintainer Quick Start (Clone-Based)
 
 ### 1. Clone
 ```bash
@@ -103,8 +126,8 @@ Detailed checklists:
 
 ### Documentation-Only Alpha
 ```bash
-git tag v0.1.0-alpha.1
-git push origin v0.1.0-alpha.1
+git tag v0.1.0-alpha.2
+git push origin v0.1.0-alpha.2
 ```
 
 ### Stable Release (after runtime code is ready)

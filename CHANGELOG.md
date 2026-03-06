@@ -8,6 +8,14 @@ The format is based on Keep a Changelog and this project follows Semantic Versio
 ### Added
 - Placeholder for upcoming runtime and adapter implementation changes.
 
+## [0.1.0-alpha.2] - 2026-03-06
+### Added
+- OpenClaw/Codex-first installer script `install.sh`.
+- Automatic skill path detection for OpenClaw/Codex environments.
+- Interactive and non-interactive API key onboarding with secure `.env` write.
+- Root-level OSS governance files: `CONTRIBUTING.md`, `SECURITY.md`, `CODE_OF_CONDUCT.md`, `RELEASE.md`.
+- Expanded `README.md` with no-clone install tutorial and maintainer quick start.
+
 ## [0.1.0-alpha.1] - 2026-03-06
 ### Added
 - Initial project scaffold (`README`, `LICENSE`, `.env.example`, scripts, skill directory).
