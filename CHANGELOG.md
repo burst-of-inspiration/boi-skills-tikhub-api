@@ -8,6 +8,11 @@ The format is based on Keep a Changelog and this project follows Semantic Versio
 ### Added
 - Placeholder for upcoming runtime and adapter implementation changes.
 
+## [0.1.0-alpha.4] - 2026-03-06
+### Fixed
+- Installer download flow no longer mixes log output into the resolved source path.
+- Improved source path capture robustness during remote archive installation.
+
 ## [0.1.0-alpha.3] - 2026-03-06
 ### Fixed
 - Updated pinned installer ref example in README from older alpha tag to current series.

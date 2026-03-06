@@ -14,7 +14,7 @@ Build a full-coverage TikHub skill set with explicit standards for:
 - testing, security, release, and observability governance
 
 ## Current Release Status
-- Current maturity: `v0.1.0-alpha.3` (governance baseline + installer ready)
+- Current maturity: `v0.1.0-alpha.4` (governance baseline + installer ready)
 - Governance documents `01-12`: completed
 - Runtime/adapter implementation: in progress
 
@@ -38,7 +38,7 @@ TIKHUB_API_KEY='your_api_key' bash /tmp/boi-tikhub-install.sh --yes --force
 
 You can also pin installer source to a ref:
 ```bash
-bash /tmp/boi-tikhub-install.sh --yes --ref v0.1.0-alpha.2
+bash /tmp/boi-tikhub-install.sh --yes --ref v0.1.0-alpha.4
 ```
 
 ## Maintainer Quick Start (Clone-Based)
@@ -126,8 +126,8 @@ Detailed checklists:
 
 ### Documentation-Only Alpha
 ```bash
-git tag v0.1.0-alpha.2
-git push origin v0.1.0-alpha.2
+git tag v0.1.0-alpha.4
+git push origin v0.1.0-alpha.4
 ```
 
 ### Stable Release (after runtime code is ready)

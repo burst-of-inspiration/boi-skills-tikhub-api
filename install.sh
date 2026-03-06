@@ -27,7 +27,7 @@ USAGE
 }
 
 log() {
-  printf '[install] %s\n' "$*"
+  printf '[install] %s\n' "$*" >&2
 }
 
 err() {
@@ -207,7 +207,7 @@ fi
 mkdir -p "$TARGET_SKILLS_DIR"
 TARGET_SKILL_DIR="$TARGET_SKILLS_DIR/$SKILL_NAME"
 
-SOURCE_ROOT="$(resolve_source_root)"
+SOURCE_ROOT="$(resolve_source_root | tail -n 1)"
 SOURCE_SKILL_DIR="$SOURCE_ROOT/skills/tikhub"
 SOURCE_ENV_EXAMPLE="$SOURCE_ROOT/.env.example"
 
